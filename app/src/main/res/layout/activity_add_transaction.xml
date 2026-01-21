@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Income/Expense Toggle -->
+        <RadioGroup
+            android:id="@+id/radio_group_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/toggle_bg"
+            android:padding="4dp">
+            
+            <RadioButton
+                android:id="@+id/radio_expense"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="Expense"
+                android:gravity="center"
+                android:button="@null"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@color/toggle_text_color"
+                android:checked="true"/>
+                
+            <RadioButton
+                android:id="@+id/radio_income"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="Income"
+                android:gravity="center"
+                android:button="@null"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@color/toggle_text_color"/>
+        </RadioGroup>
+
+        <!-- Amount Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Category Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+                
+                <!-- We will use a proper Spinner or AutoCompleteTextView here, but sticking to logic simplicity for now, let's keep the spinner but wrap it or style it nicely. Actually, standard Spinner doesn't go inside TextInputLayout well. Let's use a Card wrapper for the spinner or just keep it simple but aligned. -->
+               <!-- Reverting to a simple container for Spinner to avoid complexity with AutoCompleteTextView logic updates -->
+            </com.google.android.material.textfield.TextInputLayout>
+            
+            <!-- Let's just use a clean layout for Spinner -->
+             <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_border"
+                android:paddingHorizontal="4dp">
+                 <Spinner
+                    android:id="@+id/spinner_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+             </FrameLayout>
+
+            <ImageButton
+                android:id="@+id/button_add_category"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@android:drawable/ic_input_add"
+                android:contentDescription="Add Category"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Date Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date (YYYY-MM-DD)"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Notes Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Notes"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine" 
+                android:minLines="2"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Save Transaction"
+            android:textSize="16sp"
+            android:backgroundTint="@color/primary"/>
+
+    </LinearLayout>
+</ScrollView>

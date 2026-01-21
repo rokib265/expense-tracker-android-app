@@ -2,4 +2,45 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <!-- Vibrant Brand Colors -->
+    <color name="primary">#4834d4</color> <!-- Deep Blurple -->
+    <color name="primary_variant">#686de0</color>
+    <color name="secondary">#22a6b3</color> <!-- Teal -->
+    <color name="secondary_variant">#7ed6df</color>
+    <color name="accent">#eb4d4b</color> <!-- Red-Pink -->
+    
+    <!-- Financial Colors -->
+    <color name="income_green">#6ab04c</color> <!-- Natural Green -->
+    <color name="expense_red">#eb4d4b</color> <!-- Carmelita -->
+    <color name="balance_blue">#30336b</color> <!-- Deep Navy -->
+    
+    <!-- Modern Backgrounds -->
+    <color name="background_light">#F8F9FD</color>
+    <color name="surface_card">#FFFFFF</color>
+    <color name="text_primary">#130f40</color>
+    <color name="text_secondary">#535c68</color>
+    <color name="text_hint">#95afc0</color>
+
+    <!-- FAB Color -->
+    <color name="fab_bg">#0984e3</color> <!-- Electron Blue -->
+    
+    <!-- Vibrant Category Palette -->
+    <color name="cat_1">#ff7979</color> 
+    <color name="cat_2">#badc58</color> 
+    <color name="cat_3">#22a6b3</color> 
+    <color name="cat_4">#f0932b</color> 
+    <color name="cat_5">#6ab04c</color> 
+    <color name="cat_6">#be2edd</color> 
+    <color name="cat_7">#4834d4</color> 
+    <color name="cat_8">#eb4d4b</color> 
+    
+    <!-- Interesting Gradient Colors (Blue/Purple/Peach) -->
+    <color name="grad_start">#4158D0</color>
+    <color name="grad_mid">#C850C0</color>
+    <color name="grad_end">#FFCC70</color>
+    
+    <!-- Tints -->
+    <color name="income_tint">#E0F2F1</color>
+    <color name="expense_tint">#FFEBEE</color>
 </resources>

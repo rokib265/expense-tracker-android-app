@@ -12,6 +12,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        // Force Light Mode
+        androidx.appcompat.app.AppCompatDelegate.setDefaultNightMode(androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO);
+        
+        // Make full screen
+        getWindow().setFlags(
+            android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+            android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        );
+        
         setContentView(R.layout.activity_main);
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
